@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Usluge | Stomatološka ordinacija dr Nikolić, Vračar</title>
+<meta name="description" content="Implantologija, oralna hirurgija, protetika, estetska stomatologija. Ordinacija dr Nikolić na Vračaru, Beograd.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--primary:#1a5276;--primary-light:#2471a3;--accent:#148f77;--accent-light:#1abc9c;--dark:#1c2833;--text:#2c3e50;--text-light:#5d6d7e;--bg:#fff;--bg-soft:#f8f9fa;--border:#e8ecef;--shadow:0 2px 16px rgba(0,0,0,.06);--shadow-lg:0 8px 32px rgba(0,0,0,.10);--radius:14px;--radius-sm:8px;--font-body:'DM Sans',sans-serif;--font-display:'Playfair Display',serif}*{margin:0;padding:0;box-sizing:border-box}body{font-family:var(--font-body);color:var(--text);background:var(--bg);line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased}a{text-decoration:none;color:inherit}img{max-width:100%;display:block}.header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}.header-inner{max-width:1200px;margin:0 auto;padding:0 24px;height:72px;display:flex;align-items:center;justify-content:space-between}.logo{font-family:var(--font-display);font-size:1.35rem;font-weight:600;color:var(--primary)}.logo span{color:var(--accent)}.nav{display:flex;align-items:center;gap:32px}.nav a{font-size:.92rem;font-weight:500;color:var(--text-light);transition:color .2s}.nav a:hover,.nav a.active{color:var(--primary)}.nav-cta{background:var(--primary);color:#fff!important;padding:10px 22px;border-radius:50px;font-weight:600;font-size:.88rem;transition:background .2s}.nav-cta:hover{background:var(--primary-light)}.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}.hamburger span{width:24px;height:2px;background:var(--dark)}.mobile-menu{display:none;position:fixed;top:72px;left:0;right:0;bottom:0;background:#fff;padding:24px;flex-direction:column;z-index:99}.mobile-menu.open{display:flex}.mobile-menu a{display:block;padding:16px 0;font-size:1.05rem;font-weight:500;color:var(--text);border-bottom:1px solid var(--border)}.mobile-menu .nav-cta{display:block;text-align:center;margin-top:16px;padding:14px 24px;background:var(--primary);color:#fff!important;border-radius:50px;border-bottom:none}.btn-primary{display:inline-block;background:var(--primary);color:#fff;padding:14px 32px;border-radius:50px;font-weight:600;font-size:.95rem;transition:background .2s,transform .2s;font-family:var(--font-body)}.btn-primary:hover{background:var(--primary-light);transform:translateY(-2px)}.btn-secondary{display:inline-block;background:transparent;color:var(--primary);padding:14px 32px;border-radius:50px;font-weight:600;font-size:.95rem;border:2px solid var(--primary);transition:all .2s;font-family:var(--font-body)}.btn-secondary:hover{background:var(--primary);color:#fff}.btn-accent{display:inline-block;background:var(--accent);color:#fff;padding:14px 32px;border-radius:50px;font-weight:600;font-size:.95rem;transition:background .2s;font-family:var(--font-body)}.btn-accent:hover{background:var(--accent-light)}section{padding:80px 24px}.container{max-width:1200px;margin:0 auto}.section-label{font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);margin-bottom:12px}.section-title{font-family:var(--font-display);font-size:2.2rem;font-weight:600;color:var(--dark);margin-bottom:16px;line-height:1.25}.section-subtitle{font-size:1.05rem;color:var(--text-light);max-width:600px;margin-bottom:48px}.text-center{text-align:center}.mx-auto{margin-left:auto;margin-right:auto}footer{background:var(--dark);color:rgba(255,255,255,.7);padding:40px 24px;text-align:center;font-size:.85rem}footer a{color:rgba(255,255,255,.9)}footer .credit{margin-top:8px;font-size:.78rem;opacity:.5}
+
+/* PAGE HERO */
+.page-hero {
+  padding: 140px 24px 60px;
+  background: linear-gradient(165deg, #f0f6fa 0%, #ffffff 60%);
+  text-align: center;
+}
+.page-hero h1 {
+  font-family: var(--font-display);
+  font-size: 2.6rem; font-weight: 600;
+  color: var(--dark); margin-bottom: 16px;
+}
+.page-hero p {
+  font-size: 1.1rem; color: var(--text-light);
+  max-width: 600px; margin: 0 auto 32px;
+}
+
+/* SERVICES GRID */
+.services-grid {
+  display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 28px;
+}
+.service-card {
+  border-radius: var(--radius); overflow: hidden;
+  background: #fff; border: 1px solid var(--border);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.service-card img { width: 100%; height: 200px; object-fit: cover; }
+.service-card-body { padding: 28px; }
+.service-card h3 { font-size: 1.15rem; font-weight: 600; color: var(--dark); margin-bottom: 10px; }
+.service-card p { font-size: 0.92rem; color: var(--text-light); line-height: 1.65; margin-bottom: 16px; }
+.service-tag {
+  display: inline-block;
+  background: rgba(26,82,118,0.08);
+  color: var(--primary);
+  padding: 4px 12px; border-radius: 50px;
+  font-size: 0.78rem; font-weight: 600;
+}
+
+/* SERVICE DETAIL */
+.service-detail {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
+  align-items: center; padding: 80px 0;
+  border-bottom: 1px solid var(--border);
+}
+.service-detail:last-child { border-bottom: none; }
+.service-detail.reverse { direction: rtl; }
+.service-detail.reverse > * { direction: ltr; }
+.service-detail img {
+  width: 100%; height: 360px; object-fit: cover;
+  border-radius: var(--radius);
+}
+.service-detail h2 {
+  font-family: var(--font-display);
+  font-size: 1.8rem; font-weight: 600;
+  color: var(--dark); margin-bottom: 16px;
+}
+.service-detail p { font-size: 0.98rem; color: var(--text-light); margin-bottom: 12px; line-height: 1.7; }
+.service-detail .detail-label {
+  font-size: 0.82rem; font-weight: 700;
+  color: var(--accent); text-transform: uppercase;
+  letter-spacing: 0.1em; margin-bottom: 8px;
+}
+
+/* CTA BANNER */
+.cta-banner{background:var(--dark);padding:80px 24px;text-align:center;color:#fff}
+.cta-banner h2{font-family:var(--font-display);font-size:2rem;font-weight:600;margin-bottom:16px}
+.cta-banner p{font-size:1.05rem;opacity:.8;margin-bottom:32px;max-width:500px;margin-left:auto;margin-right:auto}
+
+@media(max-width:900px){
+  .nav{display:none}.hamburger{display:flex}
+  .services-grid{grid-template-columns:1fr}
+  .service-detail{grid-template-columns:1fr;gap:32px}
+  .service-detail.reverse{direction:ltr}
+  .page-hero h1{font-size:2rem}
+  .service-detail h2{font-size:1.5rem}
+  .service-detail img{height:260px}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">dr Nikolić <span>dental</span></a>
+    <nav class="nav">
+      <a href="index.html">Početna</a>
+      <a href="usluge.html" class="active">Usluge</a>
+      <a href="o-nama.html">O nama</a>
+      <a href="kontakt.html">Kontakt</a>
+      <a href="tel:+381112040753" class="nav-cta">Pozovite nas</a>
+    </nav>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Meni"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Početna</a>
+  <a href="usluge.html">Usluge</a>
+  <a href="o-nama.html">O nama</a>
+  <a href="kontakt.html">Kontakt</a>
+  <a href="tel:+381112040753" class="nav-cta">Pozovite nas</a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <span class="section-label">Naše usluge</span>
+  <h1>Kompletna stomatološka nega na jednom mestu.</h1>
+  <p>Od redovnih pregleda do složene implantologije. Dr Ivan Nikolić, specijalista oralne hirurgije, i dr Jelena Nikolić pokrivaju sve oblasti stomatologije.</p>
+  <a href="tel:+381112040753" class="btn-primary">Zakažite pregled</a>
+</section>
+
+<!-- SERVICES GRID -->
+<section>
+  <div class="container">
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1629909615957-be67e4c0e7a3?auto=format&fit=crop&w=600&q=80" alt="Implantologija" loading="lazy">
+        <div class="service-card-body">
+          <h3>Implantologija</h3>
+          <p>Ugradnja zubnih implantata koji izgledaju i funkcionišu kao pravi zubi. Dr Ivan Nikolić, specijalista oralne hirurgije, ima višegodišnje iskustvo u ovoj oblasti.</p>
+          <span class="service-tag">Specijalizacija</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1606265752439-1f18756aa5fc?auto=format&fit=crop&w=600&q=80" alt="Oralna hirurgija" loading="lazy">
+        <div class="service-card-body">
+          <h3>Oralna hirurgija</h3>
+          <p>Vađenje zuba, hirurški zahvati na mekim i koštanim tkivima, tretman cisti. Sve hirurške procedure izvodi dr Ivan Nikolić, spec. oralni hirurg.</p>
+          <span class="service-tag">Specijalizacija</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=600&q=80" alt="Protetika" loading="lazy">
+        <div class="service-card-body">
+          <h3>Protetika</h3>
+          <p>Krunice, mostovi, totalne i parcijalne proteze. Vraćamo funkciju i estetiku vašim zubima sa materijalima koji traju.</p>
+          <span class="service-tag">Sve vrste</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=600&q=80" alt="Estetska stomatologija" loading="lazy">
+        <div class="service-card-body">
+          <h3>Estetska stomatologija</h3>
+          <p>Izbеljivanje zuba, estetske plombe, ljuskice. Osmeh koji želite, sa rezultatom koji izgleda potpuno prirodno.</p>
+          <span class="service-tag">Popularna usluga</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=600&q=80" alt="Lečenje zuba" loading="lazy">
+        <div class="service-card-body">
+          <h3>Lečenje i popravke zuba</h3>
+          <p>Sanacija karijesa, endodoncija, lečenje kanala korena. Čuvamo svaki zub kad god je to moguće. Bezbolno i precizno.</p>
+          <span class="service-tag">Osnovna nega</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=600&q=80" alt="Preventivni pregledi" loading="lazy">
+        <div class="service-card-body">
+          <h3>Preventivni pregledi</h3>
+          <p>Redovni pregledi, čišćenje kamenca, RTG snimci. Prevencija je najjeftinija i najpametnija investicija u zdravlje zuba.</p>
+          <span class="service-tag">Preporučeno</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DETAIL: IMPLANTOLOGIJA -->
+<section style="background:var(--bg-soft);">
+  <div class="container">
+    <div class="service-detail">
+      <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=700&q=80" alt="Implantologija detalj" loading="lazy">
+      <div>
+        <p class="detail-label">Naša specijalizacija</p>
+        <h2>Implantati koji izgledaju potpuno prirodno.</h2>
+        <p>Gajaja84, naš pacijent od 2006. godine, kaže: „Ivan ih pravi previše dobrim da ljudi ne shvataju da imam implantate." To je standard koji držimo za svakog pacijenta.</p>
+        <p>Dr Ivan Nikolić je specijalista oralne hirurgije sa dugogodišnjim iskustvom u implantologiji. Svaki implantat se planira individualno, uzimajući u obzir anatomiju vilice i estetski rezultat.</p>
+        <p style="margin-top:8px;"><strong>Za koga je ovo namenjeno:</strong> Pacijenti kojima nedostaje jedan ili više zuba i žele trajno rešenje koje izgleda i funkcioniše kao prirodan zub.</p>
+        <p><strong>Koliko traje:</strong> Hirurški zahvat traje oko 30 do 60 minuta. Kompletno zarastanje i finalni rad: 3 do 6 meseci.</p>
+        <a href="tel:+381112040753" class="btn-primary" style="margin-top:20px;">Zakažite konsultaciju</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+  <h2>Niste sigurni koja usluga Vam treba?</h2>
+  <p>Pozovite nas. Pregled i konsultacija su prvi korak. Dr Nikolić će Vam objasniti opcije i napraviti plan.</p>
+  <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+    <a href="tel:+381112040753" class="btn-accent">Pozovite: 011/204-0753</a>
+    <a href="kontakt.html" class="btn-secondary" style="border-color:rgba(255,255,255,.4);color:#fff;">Pišite nam</a>
+  </div>
+</section>
+
+<footer>
+  <div>© 2026 Stomatološka ordinacija dr Nikolić. Sva prava zadržana.</div>
+  <div>Hadži Prodanova 8, Vračar, Beograd · 011/204-0753 · 065/303-1977</div>
+  <div class="credit">Sajt napravio <a href="https://nikolajanjic.com" target="_blank">Nikola Janjić</a></div>
+</footer>
+
+<script>
+function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open')}
+</script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O nama | Stomatološka ordinacija dr Nikolić, Vračar</title>
+<meta name="description" content="Upoznajte tim ordinacije dr Nikolić. Spec. dr Ivan V. Nikolić, oralni hirurg i dr Jelena Nikolić, stomatolog. Na Vračaru od 2006.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--primary:#1a5276;--primary-light:#2471a3;--accent:#148f77;--accent-light:#1abc9c;--dark:#1c2833;--text:#2c3e50;--text-light:#5d6d7e;--bg:#fff;--bg-soft:#f8f9fa;--border:#e8ecef;--shadow:0 2px 16px rgba(0,0,0,.06);--shadow-lg:0 8px 32px rgba(0,0,0,.10);--radius:14px;--radius-sm:8px;--font-body:'DM Sans',sans-serif;--font-display:'Playfair Display',serif}*{margin:0;padding:0;box-sizing:border-box}body{font-family:var(--font-body);color:var(--text);background:var(--bg);line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased}a{text-decoration:none;color:inherit}img{max-width:100%;display:block}.header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}.header-inner{max-width:1200px;margin:0 auto;padding:0 24px;height:72px;display:flex;align-items:center;justify-content:space-between}.logo{font-family:var(--font-display);font-size:1.35rem;font-weight:600;color:var(--primary)}.logo span{color:var(--accent)}.nav{display:flex;align-items:center;gap:32px}.nav a{font-size:.92rem;font-weight:500;color:var(--text-light);transition:color .2s}.nav a:hover,.nav a.active{color:var(--primary)}.nav-cta{background:var(--primary);color:#fff!important;padding:10px 22px;border-radius:50px;font-weight:600;font-size:.88rem;transition:background .2s}.nav-cta:hover{background:var(--primary-light)}.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}.hamburger span{width:24px;height:2px;background:var(--dark)}.mobile-menu{display:none;position:fixed;top:72px;left:0;right:0;bottom:0;background:#fff;padding:24px;flex-direction:column;z-index:99}.mobile-menu.open{display:flex}.mobile-menu a{display:block;padding:16px 0;font-size:1.05rem;font-weight:500;color:var(--text);border-bottom:1px solid var(--border)}.mobile-menu .nav-cta{display:block;text-align:center;margin-top:16px;padding:14px 24px;background:var(--primary);color:#fff!important;border-radius:50px;border-bottom:none}.btn-primary{display:inline-block;background:var(--primary);color:#fff;padding:14px 32px;border-radius:50px;font-weight:600;font-size:.95rem;transition:background .2s,transform .2s;font-family:var(--font-body)}.btn-primary:hover{background:var(--primary-light);transform:translateY(-2px)}.btn-accent{display:inline-block;background:var(--accent);color:#fff;padding:14px 32px;border-radius:50px;font-weight:600;font-size:.95rem;transition:background .2s;font-family:var(--font-body)}.btn-accent:hover{background:var(--accent-light)}.btn-secondary{display:inline-block;background:transparent;color:var(--primary);padding:14px 32px;border-radius:50px;font-weight:600;font-size:.95rem;border:2px solid var(--primary);transition:all .2s;font-family:var(--font-body)}.btn-secondary:hover{background:var(--primary);color:#fff}section{padding:80px 24px}.container{max-width:1200px;margin:0 auto}.section-label{font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);margin-bottom:12px}.section-title{font-family:var(--font-display);font-size:2.2rem;font-weight:600;color:var(--dark);margin-bottom:16px;line-height:1.25}.text-center{text-align:center}.mx-auto{margin-left:auto;margin-right:auto}footer{background:var(--dark);color:rgba(255,255,255,.7);padding:40px 24px;text-align:center;font-size:.85rem}footer a{color:rgba(255,255,255,.9)}footer .credit{margin-top:8px;font-size:.78rem;opacity:.5}
+
+.page-hero{padding:140px 24px 60px;background:linear-gradient(165deg,#f0f6fa 0%,#fff 60%);text-align:center}
+.page-hero h1{font-family:var(--font-display);font-size:2.6rem;font-weight:600;color:var(--dark);margin-bottom:16px}
+.page-hero p{font-size:1.1rem;color:var(--text-light);max-width:600px;margin:0 auto 32px}
+
+/* STORY */
+.story-section {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+}
+.story-image {
+  border-radius: var(--radius); overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+.story-image img { width: 100%; height: 440px; object-fit: cover; }
+.story-content h2 {
+  font-family: var(--font-display);
+  font-size: 1.9rem; font-weight: 600;
+  color: var(--dark); margin-bottom: 20px; line-height: 1.3;
+}
+.story-content p {
+  font-size: 0.98rem; color: var(--text-light); margin-bottom: 14px; line-height: 1.75;
+}
+
+/* TEAM */
+.team-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.team-card {
+  background: #fff; border: 1px solid var(--border);
+  border-radius: var(--radius); overflow: hidden;
+  transition: box-shadow 0.3s;
+}
+.team-card:hover { box-shadow: var(--shadow-lg); }
+.team-card img { width: 100%; height: 340px; object-fit: cover; }
+.team-card-body { padding: 28px; }
+.team-card h3 { font-size: 1.2rem; font-weight: 600; color: var(--dark); margin-bottom: 4px; }
+.team-card .role { font-size: 0.88rem; color: var(--accent); font-weight: 600; margin-bottom: 12px; }
+.team-card p { font-size: 0.92rem; color: var(--text-light); line-height: 1.65; }
+
+/* VALUES */
+.values-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 28px; }
+.value-card {
+  background: #fff; border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 36px;
+  text-align: center; transition: box-shadow 0.3s;
+}
+.value-card:hover { box-shadow: var(--shadow-lg); }
+.value-icon {
+  width: 64px; height: 64px; margin: 0 auto 20px;
+  background: rgba(26,82,118,0.08);
+  border-radius: 50%; display: flex;
+  align-items: center; justify-content: center;
+  font-size: 1.6rem;
+}
+.value-card h3 { font-size: 1.05rem; font-weight: 600; color: var(--dark); margin-bottom: 8px; }
+.value-card p { font-size: 0.9rem; color: var(--text-light); line-height: 1.65; }
+
+/* STATS */
+.stats-bar{background:var(--primary);padding:60px 24px;color:#fff}
+.stats-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:32px;text-align:center}
+.stat-num{font-size:3rem;font-weight:700;font-family:var(--font-display);margin-bottom:4px}
+.stat-label{font-size:.9rem;opacity:.85}
+
+.cta-banner{background:var(--dark);padding:80px 24px;text-align:center;color:#fff}
+.cta-banner h2{font-family:var(--font-display);font-size:2rem;font-weight:600;margin-bottom:16px}
+.cta-banner p{font-size:1.05rem;opacity:.8;margin-bottom:32px;max-width:500px;margin-left:auto;margin-right:auto}
+
+@media(max-width:900px){
+  .nav{display:none}.hamburger{display:flex}
+  .story-section{grid-template-columns:1fr;gap:32px}
+  .team-grid{grid-template-columns:1fr}
+  .values-grid{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .page-hero h1{font-size:2rem}
+  .story-image img{height:300px}
+  .team-card img{height:280px}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">dr Nikolić <span>dental</span></a>
+    <nav class="nav">
+      <a href="index.html">Početna</a>
+      <a href="usluge.html">Usluge</a>
+      <a href="o-nama.html" class="active">O nama</a>
+      <a href="kontakt.html">Kontakt</a>
+      <a href="tel:+381112040753" class="nav-cta">Pozovite nas</a>
+    </nav>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Meni"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Početna</a>
+  <a href="usluge.html">Usluge</a>
+  <a href="o-nama.html">O nama</a>
+  <a href="kontakt.html">Kontakt</a>
+  <a href="tel:+381112040753" class="nav-cta">Pozovite nas</a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <span class="section-label">O nama</span>
+  <h1>Porodična ordinacija sa reputacijom koja govori sama za sebe.</h1>
+  <p>Od 2006. godine na Vračaru. 69 pacijenata na Google-u. Ocena 4.9. Tim od dva specijaliste koji rade zajedno.</p>
+</section>
+
+<!-- STORY -->
+<section>
+  <div class="container">
+    <div class="story-section">
+      <div class="story-image">
+        <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=700&q=80" alt="Dr Nikolić sa pacijentom" loading="lazy">
+      </div>
+      <div class="story-content">
+        <p class="section-label">Naša priča</p>
+        <h2>Ordinacija u kojoj vas doktor poznaje po imenu.</h2>
+        <p>Stomatološka ordinacija dr Nikolić postoji od 2006. godine u ulici Hadži Prodanova 8 na Vračaru. Ovo nije velika klinika sa desecima zaposlenih. Ovo je ordinacija u kojoj vas doktori poznaju lično.</p>
+        <p>Spec. dr Ivan V. Nikolić, oralni hirurg, vodi hirurški deo prakse. Dr Jelena Nikolić pokriva opštu stomatologiju. Zajedno čine tim koji pacijenti opisuju kao „profesionalan, ljubazan i od poverenja".</p>
+        <p>Jedna pacijentkinja dolazi sa ćerkom već više od 10 godina. Drugi pacijent je sa nama od samog početka, od 2006. To govori više od bilo kog marketinga.</p>
+        <a href="kontakt.html" class="btn-primary" style="margin-top:16px;">Upoznajte nas lično</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stats-grid">
+    <div><div class="stat-num">4.9</div><div class="stat-label">ocena na Google-u</div></div>
+    <div><div class="stat-num">69</div><div class="stat-label">recenzija pacijenata</div></div>
+    <div><div class="stat-num">2006</div><div class="stat-label">godina osnivanja</div></div>
+    <div><div class="stat-num">2</div><div class="stat-label">specijaliste u timu</div></div>
+  </div>
+</div>
+
+<!-- TEAM -->
+<section>
+  <div class="container">
+    <p class="section-label text-center">Naš tim</p>
+    <h2 class="section-title text-center">Dva doktora. Jedna filozofija. Pacijent na prvom mestu.</h2>
+    <div style="height:48px;"></div>
+    <div class="team-grid">
+      <div class="team-card">
+        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=80" alt="Dr Ivan Nikolić" loading="lazy">
+        <div class="team-card-body">
+          <h3>Spec. dr Ivan V. Nikolić</h3>
+          <div class="role">Oralni hirurg · Implantolog</div>
+          <p>Specijalista oralne hirurgije sa dugogodišnjim iskustvom u implantologiji. Pacijenti ga opisuju kao „vrhunskog stručnjaka" i „stomatologa od poverenja". Poznat po tome da čuva zube kad god je moguće, umesto da odmah predlaže vađenje.</p>
+        </div>
+      </div>
+      <div class="team-card">
+        <img src="https://images.unsplash.com/photo-1594824476967-48c8b964ac31?auto=format&fit=crop&w=600&q=80" alt="Dr Jelena Nikolić" loading="lazy">
+        <div class="team-card-body">
+          <h3>Dr Jelena Nikolić</h3>
+          <div class="role">Stomatolog</div>
+          <p>Pokriva opštu stomatologiju, od preventivnih pregleda do estetskih zahvata. Zajedno sa Dr Ivanom čini tim koji radi usklađeno i efikasno, sa jednim ciljem: da svaki pacijent ode zadovoljan.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section style="background:var(--bg-soft);">
+  <div class="container">
+    <p class="section-label text-center">Naše vrednosti</p>
+    <h2 class="section-title text-center">Zašto nas pacijenti biraju ponovo.</h2>
+    <div style="height:48px;"></div>
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-icon">
+          <svg width="28" height="28" fill="none" stroke="#1a5276" stroke-width="2" stroke-linecap="round"><path d="M12 22c6.075 0 11-4.925 11-11S18.075 0 12 0 1 4.925 1 11c0 2.16.625 4.175 1.703 5.875L1 22l5.125-1.703A10.944 10.944 0 0012 22z"/></svg>
+        </div>
+        <h3>Iskrenost pre svega</h3>
+        <p>Ne predlažemo nepotreban rad. Ako zub može da se sačuva, čuvamo ga. Ako je bolje rešenje jednostavnije, kažemo vam to direktno.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">
+          <svg width="28" height="28" fill="none" stroke="#1a5276" stroke-width="2" stroke-linecap="round"><circle cx="14" cy="14" r="12"/><path d="M14 6v8l5 3"/></svg>
+        </div>
+        <h3>Poštovanje vašeg vremena</h3>
+        <p>Zakazano znači zakazano. Bez dugog čekanja, bez prebacivanja termina. Vaše vreme je jednako važno kao i naše.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">
+          <svg width="28" height="28" fill="none" stroke="#1a5276" stroke-width="2" stroke-linecap="round"><path d="M14 2l3.09 6.26L24 9.27l-5 4.87L20.18 21 14 17.77 7.82 21 9 14.14l-5-4.87 6.91-1.01z"/></svg>
+        </div>
+        <h3>Kvalitet koji traje</h3>
+        <p>Koristimo materijale i tehnike koje daju dugoročne rezultate. 69 pacijenata na Google-u potvrđuje: rad koji radimo, traje.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+  <h2>Dođite da se upoznamo.</h2>
+  <p>Pozovite i zakažite prvi pregled. Objasnićemo Vam šta je potrebno, bez obaveze i bez pritiska.</p>
+  <a href="tel:+381112040753" class="btn-accent">Pozovite: 011/204-0753</a>
+</section>
+
+<footer>
+  <div>© 2026 Stomatološka ordinacija dr Nikolić. Sva prava zadržana.</div>
+  <div>Hadži Prodanova 8, Vračar, Beograd · 011/204-0753 · 065/303-1977</div>
+  <div class="credit">Sajt napravio <a href="https://nikolajanjic.com" target="_blank">Nikola Janjić</a></div>
+</footer>
+
+<script>function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open')}</script>
+</body>
+</html>

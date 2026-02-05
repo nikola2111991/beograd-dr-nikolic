@@ -36,7 +36,7 @@
   transition: transform 0.3s, box-shadow 0.3s;
 }
 .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
-.service-card img { width: 100%; height: 200px; object-fit: cover; }
+.service-card img { width: 100%; aspect-ratio: 16/10; object-fit: cover; }
 .service-card-body { padding: 28px; }
 .service-card h3 { font-size: 1.15rem; font-weight: 600; color: var(--dark); margin-bottom: 10px; }
 .service-card p { font-size: 0.92rem; color: var(--text-light); line-height: 1.65; margin-bottom: 16px; }
@@ -58,7 +58,7 @@
 .service-detail.reverse { direction: rtl; }
 .service-detail.reverse > * { direction: ltr; }
 .service-detail img {
-  width: 100%; height: 360px; object-fit: cover;
+  width: 100%; aspect-ratio: 4/3; object-fit: cover;
   border-radius: var(--radius);
 }
 .service-detail h2 {
@@ -85,7 +85,7 @@
   .service-detail.reverse{direction:ltr}
   .page-hero h1{font-size:2rem}
   .service-detail h2{font-size:1.5rem}
-  .service-detail img{height:260px}
+  .service-detail img{aspect-ratio:3/2}
 }
 </style>
 </head>
@@ -125,7 +125,7 @@
   <div class="container">
     <div class="services-grid">
       <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1629909615957-be67e4c0e7a3?auto=format&fit=crop&w=600&q=80" alt="Implantologija" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1625134673337-519d4d10b313?auto=format&fit=crop&w=600&q=80" alt="Implantologija" loading="lazy">
         <div class="service-card-body">
           <h3>Implantologija</h3>
           <p>Ugradnja zubnih implantata koji izgledaju i funkcionišu kao pravi zubi. Dr Ivan Nikolić, specijalista oralne hirurgije, ima višegodišnje iskustvo u ovoj oblasti.</p>

@@ -22,7 +22,7 @@
   border-radius: var(--radius); overflow: hidden;
   box-shadow: var(--shadow-lg);
 }
-.story-image img { width: 100%; height: 440px; object-fit: cover; }
+.story-image img { width: 100%; aspect-ratio: 3/4; object-fit: cover; }
 .story-content h2 {
   font-family: var(--font-display);
   font-size: 1.9rem; font-weight: 600;
@@ -40,7 +40,7 @@
   transition: box-shadow 0.3s;
 }
 .team-card:hover { box-shadow: var(--shadow-lg); }
-.team-card img { width: 100%; height: 340px; object-fit: cover; }
+.team-card img { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: top; }
 .team-card-body { padding: 28px; }
 .team-card h3 { font-size: 1.2rem; font-weight: 600; color: var(--dark); margin-bottom: 4px; }
 .team-card .role { font-size: 0.88rem; color: var(--accent); font-weight: 600; margin-bottom: 12px; }
@@ -81,8 +81,8 @@
   .values-grid{grid-template-columns:1fr}
   .stats-grid{grid-template-columns:1fr 1fr}
   .page-hero h1{font-size:2rem}
-  .story-image img{height:300px}
-  .team-card img{height:280px}
+  .story-image img{aspect-ratio:4/3}
+  .team-card img{aspect-ratio:1/1}
 }
 </style>
 </head>
@@ -161,7 +161,7 @@
         </div>
       </div>
       <div class="team-card">
-        <img src="https://images.unsplash.com/photo-1594824476967-48c8b964ac31?auto=format&fit=crop&w=600&q=80" alt="Dr Jelena Nikolić" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=600&q=80" alt="Dr Jelena Nikolić" loading="lazy">
         <div class="team-card-body">
           <h3>Dr Jelena Nikolić</h3>
           <div class="role">Stomatolog</div>

@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stomatološka ordinacija dr Nikolić | Vračar, Beograd</title>
+<meta name="description" content="Stomatološka ordinacija dr Nikolić na Vračaru. Specijalizacija: implantologija i oralna hirurgija. Ocena 4.9 od 69 pacijenata na Google-u.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #1a5276;
+  --primary-light: #2471a3;
+  --accent: #148f77;
+  --accent-light: #1abc9c;
+  --dark: #1c2833;
+  --text: #2c3e50;
+  --text-light: #5d6d7e;
+  --bg: #ffffff;
+  --bg-soft: #f8f9fa;
+  --bg-warm: #fafbfc;
+  --border: #e8ecef;
+  --shadow: 0 2px 16px rgba(0,0,0,0.06);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.10);
+  --radius: 14px;
+  --radius-sm: 8px;
+  --font-body: 'DM Sans', sans-serif;
+  --font-display: 'Playfair Display', serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.7;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; display: block; }
+
+/* ===== HEADER ===== */
+.header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  transition: box-shadow 0.3s;
+}
+.header.scrolled { box-shadow: var(--shadow); }
+.header-inner {
+  max-width: 1200px; margin: 0 auto;
+  padding: 0 24px; height: 72px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.logo {
+  font-family: var(--font-display);
+  font-size: 1.35rem; font-weight: 600;
+  color: var(--primary);
+}
+.logo span { color: var(--accent); }
+.nav { display: flex; align-items: center; gap: 32px; }
+.nav a {
+  font-size: 0.92rem; font-weight: 500; color: var(--text-light);
+  transition: color 0.2s;
+}
+.nav a:hover, .nav a.active { color: var(--primary); }
+.nav-cta {
+  background: var(--primary); color: #fff !important;
+  padding: 10px 22px; border-radius: 50px;
+  font-weight: 600; font-size: 0.88rem;
+  transition: background 0.2s, transform 0.2s;
+}
+.nav-cta:hover { background: var(--primary-light); transform: translateY(-1px); }
+.hamburger {
+  display: none; flex-direction: column; gap: 5px;
+  background: none; border: none; cursor: pointer; padding: 4px;
+}
+.hamburger span {
+  width: 24px; height: 2px; background: var(--dark);
+  transition: transform 0.3s, opacity 0.3s;
+}
+.mobile-menu {
+  display: none; position: fixed; top: 72px; left: 0; right: 0; bottom: 0;
+  background: #fff; padding: 24px;
+  flex-direction: column; gap: 0;
+  z-index: 99;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a {
+  display: block; padding: 16px 0;
+  font-size: 1.05rem; font-weight: 500; color: var(--text);
+  border-bottom: 1px solid var(--border);
+}
+.mobile-menu .nav-cta {
+  display: block; text-align: center;
+  margin-top: 16px; padding: 14px 24px;
+  background: var(--primary); color: #fff !important;
+  border-radius: 50px; border-bottom: none;
+}
+
+/* ===== BUTTONS ===== */
+.btn-primary {
+  display: inline-block;
+  background: var(--primary); color: #fff;
+  padding: 14px 32px; border-radius: 50px;
+  font-weight: 600; font-size: 0.95rem;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  font-family: var(--font-body);
+}
+.btn-primary:hover { background: var(--primary-light); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(26,82,118,0.25); }
+.btn-secondary {
+  display: inline-block;
+  background: transparent; color: var(--primary);
+  padding: 14px 32px; border-radius: 50px;
+  font-weight: 600; font-size: 0.95rem;
+  border: 2px solid var(--primary);
+  transition: all 0.2s;
+  font-family: var(--font-body);
+}
+.btn-secondary:hover { background: var(--primary); color: #fff; }
+.btn-accent {
+  display: inline-block;
+  background: var(--accent); color: #fff;
+  padding: 14px 32px; border-radius: 50px;
+  font-weight: 600; font-size: 0.95rem;
+  transition: background 0.2s, transform 0.2s;
+  font-family: var(--font-body);
+}
+.btn-accent:hover { background: var(--accent-light); transform: translateY(-2px); }
+
+/* ===== HERO ===== */
+.hero {
+  padding: 140px 24px 80px;
+  background: linear-gradient(165deg, #f0f6fa 0%, #ffffff 50%, #f0faf7 100%);
+  position: relative; overflow: hidden;
+}
+.hero::before {
+  content: ''; position: absolute; top: -200px; right: -200px;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(20,143,119,0.06) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.hero-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+}
+.hero-badge {
+  display: inline-block;
+  background: rgba(26,82,118,0.08);
+  color: var(--primary);
+  padding: 8px 20px; border-radius: 50px;
+  font-size: 0.85rem; font-weight: 600;
+  margin-bottom: 24px;
+  letter-spacing: 0.02em;
+}
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: 3rem; font-weight: 600;
+  line-height: 1.2; color: var(--dark);
+  margin-bottom: 20px;
+}
+.hero p {
+  font-size: 1.1rem; color: var(--text-light);
+  line-height: 1.7; margin-bottom: 32px;
+  max-width: 520px;
+}
+.hero-buttons { display: flex; gap: 14px; flex-wrap: wrap; }
+.hero-image {
+  border-radius: 20px; overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+}
+.hero-image img {
+  width: 100%; height: 420px; object-fit: cover;
+}
+.hero-image-badge {
+  position: absolute; bottom: 20px; left: 20px;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(8px);
+  padding: 12px 20px; border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+.hero-image-badge .rating { font-size: 1.3rem; font-weight: 700; color: var(--primary); }
+.hero-image-badge .label { font-size: 0.78rem; color: var(--text-light); }
+
+/* ===== SECTIONS ===== */
+section { padding: 80px 24px; }
+.container { max-width: 1200px; margin: 0 auto; }
+.section-label {
+  font-size: 0.82rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.12em;
+  color: var(--accent); margin-bottom: 12px;
+}
+.section-title {
+  font-family: var(--font-display);
+  font-size: 2.2rem; font-weight: 600;
+  color: var(--dark); margin-bottom: 16px;
+  line-height: 1.25;
+}
+.section-subtitle {
+  font-size: 1.05rem; color: var(--text-light);
+  max-width: 600px; margin-bottom: 48px;
+}
+.text-center { text-align: center; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+
+/* ===== WHY US - BENEFIT CARDS ===== */
+.benefits-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+}
+.benefit-card {
+  border-radius: var(--radius); overflow: hidden;
+  background: #fff; border: 1px solid var(--border);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.benefit-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.benefit-card img {
+  width: 100%; height: 200px; object-fit: cover;
+}
+.benefit-card-body { padding: 24px; }
+.benefit-card h3 {
+  font-size: 1.1rem; font-weight: 600;
+  color: var(--dark); margin-bottom: 8px;
+}
+.benefit-card p {
+  font-size: 0.92rem; color: var(--text-light); line-height: 1.6;
+}
+
+/* ===== PROCESS ===== */
+.process-section { background: var(--bg-soft); }
+.process-grid {
+  display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px;
+  text-align: center;
+}
+.process-step .step-num {
+  width: 64px; height: 64px;
+  background: var(--primary); color: #fff;
+  border-radius: 50%; display: flex;
+  align-items: center; justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 1.4rem; font-weight: 700;
+}
+.process-step h3 {
+  font-size: 1.1rem; font-weight: 600;
+  margin-bottom: 8px; color: var(--dark);
+}
+.process-step p { font-size: 0.92rem; color: var(--text-light); }
+
+/* ===== STATS ===== */
+.stats-bar {
+  background: var(--primary);
+  padding: 60px 24px;
+  color: #fff;
+}
+.stats-grid {
+  max-width: 1200px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px;
+  text-align: center;
+}
+.stat-num {
+  font-size: 3rem; font-weight: 700;
+  font-family: var(--font-display);
+  margin-bottom: 4px;
+}
+.stat-label { font-size: 0.9rem; opacity: 0.85; }
+
+/* ===== REVIEWS ===== */
+.reviews-grid {
+  display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px;
+}
+.review-card {
+  background: #fff; border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 32px;
+  transition: box-shadow 0.3s;
+}
+.review-card:hover { box-shadow: var(--shadow-lg); }
+.review-stars { color: #f39c12; font-size: 1rem; margin-bottom: 16px; letter-spacing: 2px; }
+.review-text {
+  font-size: 0.95rem; color: var(--text);
+  line-height: 1.7; margin-bottom: 20px;
+  font-style: italic;
+}
+.review-author {
+  font-weight: 600; font-size: 0.9rem; color: var(--dark);
+}
+.review-source { font-size: 0.8rem; color: var(--text-light); }
+
+/* ===== CTA BANNER ===== */
+.cta-banner {
+  background: var(--dark);
+  padding: 80px 24px;
+  text-align: center; color: #fff;
+}
+.cta-banner h2 {
+  font-family: var(--font-display);
+  font-size: 2rem; font-weight: 600;
+  margin-bottom: 16px;
+}
+.cta-banner p {
+  font-size: 1.05rem; opacity: 0.8;
+  margin-bottom: 32px; max-width: 500px; margin-left: auto; margin-right: auto;
+}
+
+/* ===== FAQ ACCORDION ===== */
+.faq-section { background: var(--bg-soft); }
+.faq-list { max-width: 760px; margin: 0 auto; }
+.faq-item {
+  background: #fff; border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  margin-bottom: 12px; overflow: hidden;
+}
+.faq-question {
+  width: 100%; padding: 20px 24px;
+  background: none; border: none;
+  font-family: var(--font-body);
+  font-size: 1rem; font-weight: 600;
+  color: var(--dark); cursor: pointer;
+  display: flex; justify-content: space-between; align-items: center;
+  text-align: left;
+}
+.faq-question::after {
+  content: '+'; font-size: 1.4rem; color: var(--primary);
+  transition: transform 0.3s;
+}
+.faq-item.open .faq-question::after { content: '-'; }
+.faq-answer {
+  max-height: 0; overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s;
+}
+.faq-item.open .faq-answer { max-height: 300px; }
+.faq-answer-inner {
+  padding: 0 24px 20px;
+  font-size: 0.93rem; color: var(--text-light); line-height: 1.7;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: var(--dark); color: rgba(255,255,255,0.7);
+  padding: 40px 24px; text-align: center;
+  font-size: 0.85rem;
+}
+footer a { color: rgba(255,255,255,0.9); }
+footer .credit { margin-top: 8px; font-size: 0.78rem; opacity: 0.5; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .nav { display: none; }
+  .hamburger { display: flex; }
+  .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+  .hero h1 { font-size: 2.2rem; }
+  .hero { padding: 120px 24px 60px; }
+  .benefits-grid { grid-template-columns: 1fr; }
+  .process-grid { grid-template-columns: 1fr; gap: 32px; }
+  .stats-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .section-title { font-size: 1.8rem; }
+  .hero-image img { height: 300px; }
+}
+@media (max-width: 480px) {
+  .stats-grid { grid-template-columns: 1fr 1fr; }
+  .hero-buttons { flex-direction: column; }
+  .hero-buttons a { text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">dr Nikolić <span>dental</span></a>
+    <nav class="nav">
+      <a href="index.html" class="active">Početna</a>
+      <a href="usluge.html">Usluge</a>
+      <a href="o-nama.html">O nama</a>
+      <a href="kontakt.html">Kontakt</a>
+      <a href="tel:+381112040753" class="nav-cta">Pozovite nas</a>
+    </nav>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Meni">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Početna</a>
+  <a href="usluge.html">Usluge</a>
+  <a href="o-nama.html">O nama</a>
+  <a href="kontakt.html">Kontakt</a>
+  <a href="tel:+381112040753" class="nav-cta">Pozovite nas</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <span class="hero-badge">4.9 na Google-u  ·  69 recenzija  ·  Implantologija</span>
+      <h1>Ordinacija kojoj Vračar veruje od 2006. godine.</h1>
+      <p>69 pacijenata je ocenilo nas rad sa 4.9 na Google-u. Implantati koji izgledaju potpuno prirodno. Pristupačne cene. Zakazite pregled i uverite se sami.</p>
+      <div class="hero-buttons">
+        <a href="tel:+381112040753" class="btn-primary">Pozovite nas</a>
+        <a href="kontakt.html" class="btn-secondary">Zakažite online</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80" alt="Moderna stomatološka ordinacija dr Nikolić" loading="lazy">
+      <div class="hero-image-badge">
+        <div class="rating">4.9 / 5.0</div>
+        <div class="label">Google recenzije · 69 ocena</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section>
+  <div class="container">
+    <p class="section-label text-center">Zašto baš ordinacija dr Nikolić</p>
+    <h2 class="section-title text-center">Naši pacijenti najčešće kažu: profesionalno, bezbolno, pristupačno.</h2>
+    <p class="section-subtitle text-center mx-auto">To nije marketing. To je 69 recenzija na Google-u.</p>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <img src="https://images.unsplash.com/photo-1629909615957-be67e4c0e7a3?auto=format&fit=crop&w=600&q=80" alt="Savremena oprema" loading="lazy">
+        <div class="benefit-card-body">
+          <h3>Implantati koji izgledaju prirodno</h3>
+          <p>Pacijenti kažu da ljudi ne primećuju razliku. Dr Ivan Nikolić, specijalista oralne hirurgije, ugrađuje implantate sa preciznosšću koja dolazi od skoro 20 godina iskustva.</p>
+        </div>
+      </div>
+      <div class="benefit-card">
+        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=600&q=80" alt="Prijatan tretman" loading="lazy">
+        <div class="benefit-card-body">
+          <h3>Brzo i bez bola</h3>
+          <p>Jedan pacijent je došao sa jakim bolom. Za 30 minuta je zaboravio da je bol postojao. Ljubaznost i brzina su standard, ne izuzetak.</p>
+        </div>
+      </div>
+      <div class="benefit-card">
+        <img src="https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?auto=format&fit=crop&w=600&q=80" alt="Tim doktora" loading="lazy">
+        <div class="benefit-card-body">
+          <h3>Tim od dva specijaliste</h3>
+          <p>Dr Ivan Nikolić, specijalista oralne hirurgije, i dr Jelena Nikolić, stomatolog. Svaki pacijent dobija punu pažnju tima koji radi zajedno od 2006.</p>
+        </div>
+      </div>
+      <div class="benefit-card">
+        <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=600&q=80" alt="Zadovoljni pacijenti" loading="lazy">
+        <div class="benefit-card-body">
+          <h3>Pristupačne cene, fer odnos</h3>
+          <p>Pacijenti stalno ističu odnos kvaliteta i cene. Dr Nikolić čuva zube kad god je moguće. Ne predlaže nepotreban rad.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process-section">
+  <div class="container">
+    <p class="section-label text-center">Kako izgleda poseta</p>
+    <h2 class="section-title text-center">Tri koraka do osmеha.</h2>
+    <p class="section-subtitle text-center mx-auto">Bez komplikacija, bez čekanja.</p>
+    <div class="process-grid">
+      <div class="process-step">
+        <div class="step-num">1</div>
+        <h3>Pozovite nas</h3>
+        <p>Javite se na 011/204-0753 ili 065/303-1977. Zakazujemo pregled u najkraćem roku.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">2</div>
+        <h3>Pregled i plan</h3>
+        <p>Dr Nikolić pregleda, objasni stanje i napravi plan terapije. Bez iznenađenja, bez skrivenih troškova.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">3</div>
+        <h3>Rezultat</h3>
+        <p>Odlazite sa osmеhom. Kao i 69 pacijenata pre Vas koji su nam dali 4.9 na Google-u.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stats-grid">
+    <div>
+      <div class="stat-num">4.9</div>
+      <div class="stat-label">ocena na Google-u</div>
+    </div>
+    <div>
+      <div class="stat-num">69</div>
+      <div class="stat-label">zadovoljnih pacijenata</div>
+    </div>
+    <div>
+      <div class="stat-num">2006</div>
+      <div class="stat-label">godina osnivanja</div>
+    </div>
+    <div>
+      <div class="stat-num">2</div>
+      <div class="stat-label">specijaliste u timu</div>
+    </div>
+  </div>
+</div>
+
+<!-- REVIEWS -->
+<section>
+  <div class="container">
+    <p class="section-label text-center">Šta kažu pacijenti</p>
+    <h2 class="section-title text-center">69 pacijenata ne može da greši.</h2>
+    <p class="section-subtitle text-center mx-auto">Prave reči pravih pacijenata sa Google-a.</p>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">„Moja ćerka i ja smo duže od 10 godina pacijenti ordinacije Nikolić. Prezadovoljne smo kvalitetom usluge i profesionalnošću doktorskog tima."</p>
+        <div class="review-author">Ramonda Nathaliae</div>
+        <div class="review-source">Google recenzija</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">„Dr Ivan mi je ugradio dva implantata i uspeo da spasi zub koji bi većina stomatologa verovatno izvadila. Vrhunsko umeće i briga za pacijenta."</p>
+        <div class="review-author">Veljko Pejić</div>
+        <div class="review-source">Google recenzija</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">„Došao sam sa takvim bolom da je to bila katastrofa! Bukvalno pola sata i zaboravio sam na bol! Prijatno, ljubazno, svaka čast!"</p>
+        <div class="review-author">Boris Britva</div>
+        <div class="review-source">Google recenzija</div>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:40px;">
+      <a href="https://maps.google.com/?cid=8032130336462987729" target="_blank" class="btn-secondary">Pročitajte sve recenzije</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="container">
+    <p class="section-label text-center">Česta pitanja</p>
+    <h2 class="section-title text-center">Odgovori na pitanja koja pacijenti najčešće postavljaju.</h2>
+    <div class="faq-list" style="margin-top:40px;">
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">Da li je ugradnja implantata bolna?</button>
+        <div class="faq-answer"><div class="faq-answer-inner">Ugradnja implantata se vrši pod lokalnom anestezijom, tako da tokom samog zahvata ne osećate bol. Dr Ivan Nikolić, specijalista oralne hirurgije, izvodi ovu proceduru redovno i pacijenti konstantno ističu da je iskustvo daleko bolje nego što su očekivali.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">Koliko traje ugradnja jednog implantata?</button>
+        <div class="faq-answer"><div class="faq-answer-inner">Sam hirurški zahvat traje oko 30 do 60 minuta po implantatu. Ceo proces, uključujući zarastanje i postavljanje krunice, traje 3 do 6 meseci. Dr Nikolić pravi detaljan plan i raspored pre početka.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">Koje usluge nudite?</button>
+        <div class="faq-answer"><div class="faq-answer-inner">Nudimo kompletnu stomatološku negu: implantologiju, oralnu hirurgiju, protetiku, estetsku stomatologiju, lečenje zuba i preventivne preglede. Dr Ivan Nikolić je specijalista oralne hirurgije, a dr Jelena Nikolić pokriva opštu stomatologiju.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">Da li mogu da platim na rate?</button>
+        <div class="faq-answer"><div class="faq-answer-inner">Da. Za veće zahvate kao što su implantati, nudimo mogućnost plaćanja u ratama. Detalje o uslovima možete dobiti pozivom na 011/204-0753 ili prilikom prvog pregleda.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">Gde se nalazite?</button>
+        <div class="faq-answer"><div class="faq-answer-inner">Nalazimo se na Hadži Prodanovoj 8, na Vračaru, blizu Vukovog spomenika. Dostupni smo gradskim prevozom (linije 25, 26, 27) i lako se dolazi i kolima jer je u blizini parking zona 2.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta-banner">
+  <h2>Zaslužujete stomatologa kome verujete.</h2>
+  <p>Pozovite nas i zakazite prvi pregled. 69 pacijenata je već ocenilo nas rad sa 4.9 na Google-u.</p>
+  <a href="tel:+381112040753" class="btn-accent">Pozovite: 011/204-0753</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>© 2026 Stomatološka ordinacija dr Nikolić. Sva prava zadržana.</div>
+  <div>Hadži Prodanova 8, Vračar, Beograd · 011/204-0753 · 065/303-1977</div>
+  <div class="credit">Sajt napravio <a href="https://nikolajanjic.com" target="_blank">Nikola Janjić</a></div>
+</footer>
+
+<script>
+// Header scroll
+window.addEventListener('scroll', () => {
+  document.getElementById('header').classList.toggle('scrolled', window.scrollY > 10);
+});
+
+// Mobile menu
+function toggleMenu() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+
+// FAQ
+function toggleFaq(btn) {
+  const item = btn.parentElement;
+  const wasOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!wasOpen) item.classList.add('open');
+}
+</script>
+</body>
+</html>
